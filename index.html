@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Form Input Wave</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please Login</h1>
+      <form action="/login" method="post">
+        <script>
+            if(document.location.hash === '#unauthorized') {
+                document.write('<div class="unauthorized">Invalid Username or Password</div>');
+            } else if(document.location.hash === '#error') {
+                document.write('<div class="error">An error has occured</div>');
+            }
+          </script>
+
+         
+        <div class="form-control">
+          <input type="text" required name="username">
+          <label>UserName</label>
+          
+        </div>
+
+        <div class="form-control">
+          <input type="password" name="username" id="username">
+          <label>Password</label>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+        
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
